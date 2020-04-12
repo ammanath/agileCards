@@ -1,20 +1,21 @@
+import 'package:agile_cards/agileCard.dart';
 import 'package:flutter/material.dart';
 
 class AgileCardsHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var primaryWorkingText = 'Working Software ';
-    var secondaryWorkingText = "over comprehensive documentation.";
-    String primaryRespondingText = 'Responding to change ';
-    String secondaryRespondingText ='over following a plan';
-    String primaryIndvText ='Individuals and interactions ';
-    String secondaryIndvText='over processes and tools';
-    String primaryCustText ='Customer collaboration ';
-    String secondaryCustText ='over contract negotiaion';
-    var iconCard = Icons.work;
-    var iconRespond = Icons.poll;
-    var iconIndividual = Icons.people;
-    var iconCustomer = Icons.person;
+    const primaryWorkingText = 'Working Software ';
+    const secondaryWorkingText = "over comprehensive documentation.";
+    const primaryRespondingText = 'Responding to change ';
+    const secondaryRespondingText ='over following a plan';
+    const primaryIndvText ='Individuals and interactions ';
+    const secondaryIndvText='over processes and tools';
+    const primaryCustText ='Customer collaboration ';
+    const secondaryCustText ='over contract negotiaion';
+    const iconCard = Icons.work;
+    const iconRespond = Icons.poll;
+    const iconIndividual = Icons.people;
+    const iconCustomer = Icons.person;
         return Scaffold(
           appBar: AppBar(
             title: Text('Agile Cards'),
@@ -45,47 +46,6 @@ class AgileCardsHome extends StatelessWidget {
         ],
         backgroundColor: Colors.red[200],
       ),
-    );
-  }
-}
-
-class AgileCard extends StatelessWidget {
-  const AgileCard({
-    Key key,
-    @required this.iconCard,
-    @required this.primaryText,
-    @required this.secondaryText,
-  }) : super(key: key);
-
-  final IconData iconCard;
-  final String primaryText;
-  final String secondaryText;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Card(
-        child: Container(
-          child: ListTile(
-            leading: Icon(iconCard),
-        title: Text.rich(
-          TextSpan(
-              text: primaryText,
-              style: TextStyle(fontSize: 25, color: Colors.black),
-              children: <InlineSpan>[
-                TextSpan(
-                    text: secondaryText,
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black38,
-                    ))
-              ]),
-        ),
-      ),
-      color: Colors.orange,
-              ),
-            ),
     );
   }
 }

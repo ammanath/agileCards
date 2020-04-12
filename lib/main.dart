@@ -12,7 +12,7 @@ class AgileCardsApp extends StatelessWidget {
       title: 'Agile Cards',
       theme: ThemeData(
         primarySwatch: Colors.red,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        //visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: AgileCardsHome(),
       debugShowCheckedModeBanner: false,
