@@ -1,10 +1,15 @@
 List of backlog
 
 Create a Drawer - about, list of pages, click navigate between pages
-Create a separate page for :
+Create a separate card for :
     1)Agile Values
     2)Agile Principles
     3)Extreme Programming
     4)About
+
+How do i navigate between cards?
+    When i click on Home, i want to go to the top card
+    When i click on Next, I want to go to next card
+    When i click on Previous, I want to go to previous card or Home card as approp.
 
 
