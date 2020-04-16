@@ -26,10 +26,21 @@ class AgileCard extends StatelessWidget {
               TextSpan(
                   text: dataText.primaryText,
                   style: TextStyle(fontSize: 25, color: Colors.black),
-                  children: getSecondaryText(secondaryStyle, dataText)
+                  children: getSecondaryText(secondaryStyle, dataText),
               
               ),
         ),
+        onTap: () =>{
+          showDialog(context: context,
+          builder:(context){
+            return AlertDialog(
+              //title:Text("Value"),
+              content:Text("${dataText.primaryText} ${dataText.secondaryText}"),
+            );
+          }
+          ),
+
+        }
       ),
       color: Colors.orange,
               ),
