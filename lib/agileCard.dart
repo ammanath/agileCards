@@ -76,13 +76,11 @@ class PopUpTextDisplay extends StatelessWidget {
           totalRepeatCount: 4,
           pause: Duration(milliseconds: 1500),
           speed: Duration(milliseconds: 60),
-          
           textStyle: GoogleFonts.vt323(
-            color: Colors.blue, 
+            color: Colors.blue,
             letterSpacing: .5,
             fontSize: 32,
           ),
-
           displayFullTextOnTap: true,
           stopPauseOnTap: true,
         ));
