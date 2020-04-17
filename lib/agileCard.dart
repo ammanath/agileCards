@@ -1,6 +1,7 @@
 import 'package:agile_cards/dataText.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AgileCard extends StatelessWidget {
   const AgileCard({
@@ -69,18 +70,19 @@ class PopUpTextDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
         //title:Text("Value"),
-        backgroundColor: Colors.orange[50],
+        backgroundColor: Colors.orange[200],
         content: TypewriterAnimatedTextKit(
           text: ["${dataText.primaryText} ${dataText.secondaryText}"],
           totalRepeatCount: 4,
-          pause: Duration(milliseconds: 1000),
-          textStyle: TextStyle(
-            fontSize: 24.0,
-            fontWeight: FontWeight.normal, //fontStyle: FontStyle.italic,
-            fontFamily: "Segoe UI",
-            backgroundColor: Colors.orange[50],
-            color: Colors.brown,
+          pause: Duration(milliseconds: 1500),
+          speed: Duration(milliseconds: 60),
+          
+          textStyle: GoogleFonts.vt323(
+            color: Colors.blue, 
+            letterSpacing: .5,
+            fontSize: 32,
           ),
+
           displayFullTextOnTap: true,
           stopPauseOnTap: true,
         ));
