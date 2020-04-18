@@ -11,12 +11,13 @@ class AgileCardsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Agile Cards',
+      
       theme: ThemeData(
         primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      //home: AgileCardsHome(),
-      home:WidgetsPage(),
+      home: AgileCardsHome(),
+      //home:WidgetsPage(),
       debugShowCheckedModeBanner: false,
     );
   }

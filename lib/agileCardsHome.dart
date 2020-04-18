@@ -11,7 +11,25 @@ class AgileCardsHome extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(title: Text('Agile Cards'), actions: <Widget>[
-          // action button
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              width: 150,
+              color:Colors.redAccent,
+              child: TextField(
+                  decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Search',
+                  hintText: 'Search',
+                  
+                   ),
+                   style:TextStyle(
+                     color: Colors.white,
+                   ),
+                    autofocus: false,
+                   )
+                 ),
+          ),
           IconButton(
             icon: Icon(choices[0].icon),
             tooltip: choices[0].toolTip,
@@ -40,7 +58,7 @@ class AgileCardsHome extends StatelessWidget {
     const primaryWorkingText = 'Working Software';
     const secondaryWorkingText = "over comprehensive documentation.";
     const primaryRespondingText = 'Responding to change ';
-    const secondaryRespondingText = 'over following a plan';
+    const secondaryRespondingText = 'over following a   plan';
     const primaryIndvText = 'Individuals and interactions ';
     const secondaryIndvText = 'over processes and tools';
     const primaryCustText = 'Customer collaboration ';
