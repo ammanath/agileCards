@@ -11,28 +11,10 @@ class AgileCardsHome extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(title: Text('Agile Cards'), actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              width: 150,
-              color:Colors.lightBlue,
-              child: TextField(
-                  decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Search',
-                  hintText: 'Search',
-                  
-                   ),
-                   style:TextStyle(
-                     color: Colors.white,
-                   ),
-                    autofocus: false,
-                   )
-                 ),
-          ),
+          
           IconButton(
             icon: Icon(choices[0].icon),
-            tooltip: choices[0].toolTip,
+            color: choices[0].color,
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context)=>WidgetsPage()));
             },
@@ -40,6 +22,7 @@ class AgileCardsHome extends StatelessWidget {
           // action button
           IconButton(
             icon: Icon(choices[1].icon),
+            color: choices[0].color,
             onPressed: () {
               //_select(choices[1]);
             },
@@ -114,15 +97,15 @@ class AgileCardsHome extends StatelessWidget {
 }
 
 class Choice {
-  const Choice({this.title, this.icon, this.toolTip=''});
+  const Choice({this.title, this.icon, this.color=Colors.blue});
 
   final String title;
   final IconData icon;
 
-  final toolTip ;
+  final color ;
 }
 
 const List<Choice> choices = const <Choice>[
-  const Choice(title: 'Home', icon: Icons.home, toolTip: 'Home'),
-  const Choice(title: 'Rate', icon: Icons.rate_review),
+  const Choice(title: 'Home', icon: Icons.home, color: Colors.pink),
+  const Choice(title: 'Rate', icon: Icons.details,color: Colors.pink),
 ];

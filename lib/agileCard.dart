@@ -50,11 +50,6 @@ class AgileCard extends StatelessWidget {
         .toList()
           ..removeAt(0);
 
-    // return <InlineSpan>[
-    //               TextSpan(
-    //                   text: dataText1.secondaryText,
-    //                   style: secondaryStyle)
-    //         ];
   }
 }
 
