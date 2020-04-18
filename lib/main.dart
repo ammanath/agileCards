@@ -16,8 +16,8 @@ class AgileCardsApp extends StatelessWidget {
         primarySwatch: Colors.lightBlue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: AgileCardsHome(),
-      //home:WidgetsPage(),
+      //home: AgileCardsHome(),
+      home:WidgetsPage(),
       debugShowCheckedModeBanner: false,
     );
   }
