@@ -8,7 +8,6 @@ class DataListWidget extends StatelessWidget {
     @required this.dataText,
   }) : super(key: key);
 
-
   final List<DataText> dataText;
 
   @override
@@ -16,22 +15,22 @@ class DataListWidget extends StatelessWidget {
     var dataValues = dataText.take(4);
     var dataPrinciples = dataText.sublist(4);
 
-var headerAgileValues = "Agile Values";
-var headerAgilePrinciples = "Agile Principles";
+    var headerAgileValues = "Agile Values";
+    var headerAgilePrinciples = "Agile Principles";
 
-return Column(
-      children:<Widget>[ 
+    return Column(
+      children: <Widget>[
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: DataCard(headerCard: headerAgileValues, dataCard: dataValues),
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: DataCard(headerCard: headerAgilePrinciples, dataCard: dataPrinciples),
+          child: DataCard(
+              headerCard: headerAgilePrinciples, dataCard: dataPrinciples),
         ),
-        ],
-
-      );
+      ],
+    );
 
     // return Column(
     //   children:dataPrinciples.map((element) => AgileCard(dataText: element)).toList(),
@@ -52,14 +51,18 @@ class DataCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.red[300],
-      child: Column(
-      children:
-      List.from([Padding(
-        padding: const EdgeInsets.fromLTRB(8.0,18.0,0.0,6.0),
-        child: HeaderText(headerCardTitle: headerCard),
-      )])..addAll(   dataCard.map((element) => AgileCard(dataText: element)).toList()),
-    ));
+        color: Colors.lightBlue[800],
+        child: Column(
+          children: List.from([
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8.0, 18.0, 0.0, 6.0),
+              child: HeaderText(headerCardTitle: headerCard),
+            )
+          ])
+            ..addAll(dataCard
+                .map((element) => AgileCard(dataText: element))
+                .toList()),
+        ));
   }
 }
 
@@ -73,15 +76,16 @@ class HeaderText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(              headerCardTitle,
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  color: Colors.red[50],
-                  fontSize: 20,
-                  letterSpacing: 8.0,
-                  fontWeight: FontWeight.bold,
-                ),
-                textWidthBasis: TextWidthBasis.parent,
-               );
+    return Text(
+      headerCardTitle,
+      textAlign: TextAlign.left,
+      style: TextStyle(
+        color: Colors.blue[200],
+        fontSize: 24,
+        letterSpacing: 8.0,
+        fontWeight: FontWeight.bold,
+      ),
+      textWidthBasis: TextWidthBasis.parent,
+    );
   }
 }

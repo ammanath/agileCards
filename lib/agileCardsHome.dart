@@ -15,7 +15,7 @@ class AgileCardsHome extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Container(
               width: 150,
-              color:Colors.redAccent,
+              color:Colors.lightBlue,
               child: TextField(
                   decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -49,7 +49,7 @@ class AgileCardsHome extends StatelessWidget {
             child: DataListWidget(
           dataText: dataText1,
         )),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.lightBlue[800],
       ),
     );
   }
@@ -65,7 +65,7 @@ class AgileCardsHome extends StatelessWidget {
     const secondaryCustText = 'over contract negotiaion';
     const iconCard = Icons.work;
     const iconRespond = Icons.poll;
-    const iconIndividual = Icons.people;
+    const iconIndividual = Icons.people;  
     const iconCustomer = Icons.person;
     const iconPrinciple = Icons.loyalty;
     List<DataText> dataText1 = [
@@ -86,22 +86,22 @@ class AgileCardsHome extends StatelessWidget {
         'that the best work emerges from self-organized teams'
       ]),
       DataText(iconPrinciple, [
-        'Providing ',
-        'motivated individuals with the envt. and support they need and trusting them to get the job done'
+        'Providing motivated individuals ',
+        'with the envt. and support they need and trusting them to get the job done'
       ]),
       DataText(iconPrinciple,
           ['Creating processes ', 'that promote sustainable efforts']),
       DataText(iconPrinciple,
-          ['Maintaining ', 'a constant pace for completed work']),
+          ['Maintaining a constant pace ', 'for completed work']),
       DataText(iconPrinciple,
-          ['Welcoming ', 'changing requirements, even late in a project']),
+          ['Welcoming changing requirements, ', ' even late in a project']),
       DataText(iconPrinciple, [
-        'Assembling ',
-        'the project team and business owners on a daily basis throughout the project'
+        'Assembling the project team and business owners ',
+        'on a daily basis throughout the project'
       ]),
       DataText(iconPrinciple, [
-        'Having ',
-        'the team reflect at regular intervals on how to become more effective, then tuning and adjusting behaviour accordingly'
+        'Having the team reflect at regular intervals ',
+        'on how to become more effective, then tuning and adjusting behaviour accordingly'
       ]),
       DataText(iconPrinciple,
           ['Measuring progress ', 'by the amount of completed work']),

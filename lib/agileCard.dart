@@ -37,7 +37,7 @@ class AgileCard extends StatelessWidget {
                           return PopUpTextDisplay(dataText: dataText);
                         }),
                   }),
-          color: Colors.orange,
+          color: Colors.lightBlue[600],
         ),
       ),
     );
@@ -70,7 +70,7 @@ class PopUpTextDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
         //title:Text("Value"),
-        backgroundColor: Colors.orange[200],
+        backgroundColor: Colors.blue[200],
         content: TypewriterAnimatedTextKit(
           text: ["${dataText.primaryText} ${dataText.secondaryText}"],
           totalRepeatCount: 4,
