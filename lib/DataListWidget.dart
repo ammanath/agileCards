@@ -40,41 +40,23 @@ class DataListWidget extends StatelessWidget {
     var headerAgilePrinciples = "Agile Principles";
 
     var cardList = [
-      Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: DataCard(headerCard: headerAgileValues, dataCard: dataValues),
-      ),
-      Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: DataCard(
-            headerCard: headerAgilePrinciples, dataCard: dataPrinciples),
-      ),
+      DataCard(headerCard: headerAgileValues, dataCard: dataValues),
+      DataCard(headerCard: headerAgilePrinciples, dataCard: dataPrinciples),
     ];
 
+    // return Column(
+    //   children: cardList,
+    // );
+//TODO: Implement the naviagation menu to the next card
     return Column(
-      children: cardList,
-    );
-//TODO: Need to try and fix the rendering issues with the ScrollablePositionedList
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      mainAxisSize: MainAxisSize.max,
-      
       children: <Widget>[
           SizedBox(
-           height: 5000,
-           width:5000,
+           height: 1000,
+           //width:2000,
             child: ScrollablePositionedList.builder(
-              itemCount: products.length,
+              itemCount: cardList.length,
               itemBuilder: (BuildContext ctxt, int index) {
-                return Padding(
-                  padding: const EdgeInsets.all(88.0),
-                  child: new Card(
-                    
-                    child: DataCard(
-            headerCard: headerAgilePrinciples, dataCard: dataPrinciples),
-                    ),
-                );
+                return  cardList[index];
               },
               itemScrollController: itemScrollController,
               itemPositionsListener: itemPositionsListener,

@@ -50,23 +50,7 @@ class AgileCardsHome extends StatelessWidget {
           ),
         ]),
         body: SingleChildScrollView(
-            child: DataListWidget(dataText: dataText1,)
-        //     child: Column(children: <Widget>[
-        //   SizedBox(
-        //     height: 4000,
-        //     child: ScrollablePositionedList.builder(
-        //       itemCount: products.length,
-        //       itemBuilder: (BuildContext ctxt, int index) {
-        //         return Padding(
-        //           padding: const EdgeInsets.all(88.0),
-        //           child: new Card(child: Text(products[index])),
-        //         );
-        //       },
-        //       itemScrollController: itemScrollController,
-        //       itemPositionsListener: itemPositionsListener,
-        //     ),
-        //   )
-        // ])
+           child: DataListWidget(dataText: dataText1,)
         ),
         backgroundColor: Colors.lightBlue[800],
       ),
