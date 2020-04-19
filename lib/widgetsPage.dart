@@ -1,12 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
-
-const numberOfItems = 5001;
-const minItemHeight = 20.0;
-const maxItemHeight = 150.0;
-const scrollDuration = Duration(seconds: 2);
-
 class WidgetsPage extends StatelessWidget {
   final ItemScrollController itemScrollController = ItemScrollController();
   final ItemPositionsListener itemPositionsListener =
@@ -30,7 +24,9 @@ class WidgetsPage extends StatelessWidget {
         child: ScrollablePositionedList.builder(
           itemCount: 50,
           itemBuilder: (context, index) => Container(
-              child: Padding(
+            child: Column(
+          children: <Widget>[
+              Padding(
             padding: const EdgeInsets.all(8.0),
             child: SingleChildScrollView(
               child: Card(
@@ -38,7 +34,9 @@ class WidgetsPage extends StatelessWidget {
                 child: (Text('Item $index')),
               ),
             ),
-          )),
+          ),
+          ],
+          ),),
           itemScrollController: itemScrollController,
           itemPositionsListener: itemPositionsListener,
         ),

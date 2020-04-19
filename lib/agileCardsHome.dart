@@ -2,21 +2,42 @@ import 'package:agile_cards/DataListWidget.dart';
 import 'package:agile_cards/dataText.dart';
 import 'package:agile_cards/widgetsPage.dart';
 import 'package:flutter/material.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class AgileCardsHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<DataText> dataText1 = getAgileValues();
+    List<String> products = [
+      "Test1.1",
+      "Test2",
+      "Test3",
+      "Test1",
+      "Test2",
+      "Test3",
+      "Test1",
+      "Test2",
+      "Test3",
+      "Test1",
+      "Test2",
+      "Test3",
+      "Test1",
+      "Test2",
+      "Test33",
+    ];
+    final ItemScrollController itemScrollController = ItemScrollController();
+    final ItemPositionsListener itemPositionsListener =
+        ItemPositionsListener.create();
 
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(title: Text('Agile Cards'), actions: <Widget>[
-          
           IconButton(
             icon: Icon(choices[0].icon),
             color: choices[0].color,
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>WidgetsPage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => WidgetsPage()));
             },
           ),
           // action button
@@ -29,9 +50,24 @@ class AgileCardsHome extends StatelessWidget {
           ),
         ]),
         body: SingleChildScrollView(
-            child: DataListWidget(
-          dataText: dataText1,
-        )),
+            child: DataListWidget(dataText: dataText1,)
+        //     child: Column(children: <Widget>[
+        //   SizedBox(
+        //     height: 4000,
+        //     child: ScrollablePositionedList.builder(
+        //       itemCount: products.length,
+        //       itemBuilder: (BuildContext ctxt, int index) {
+        //         return Padding(
+        //           padding: const EdgeInsets.all(88.0),
+        //           child: new Card(child: Text(products[index])),
+        //         );
+        //       },
+        //       itemScrollController: itemScrollController,
+        //       itemPositionsListener: itemPositionsListener,
+        //     ),
+        //   )
+        // ])
+        ),
         backgroundColor: Colors.lightBlue[800],
       ),
     );
@@ -48,7 +84,7 @@ class AgileCardsHome extends StatelessWidget {
     const secondaryCustText = 'over contract negotiaion';
     const iconCard = Icons.work;
     const iconRespond = Icons.poll;
-    const iconIndividual = Icons.people;  
+    const iconIndividual = Icons.people;
     const iconCustomer = Icons.person;
     const iconPrinciple = Icons.loyalty;
     List<DataText> dataText1 = [
@@ -97,15 +133,15 @@ class AgileCardsHome extends StatelessWidget {
 }
 
 class Choice {
-  const Choice({this.title, this.icon, this.color=Colors.blue});
+  const Choice({this.title, this.icon, this.color = Colors.blue});
 
   final String title;
   final IconData icon;
 
-  final color ;
+  final color;
 }
 
 const List<Choice> choices = const <Choice>[
   const Choice(title: 'Home', icon: Icons.home, color: Colors.pink),
-  const Choice(title: 'Rate', icon: Icons.details,color: Colors.pink),
+  const Choice(title: 'Rate', icon: Icons.details, color: Colors.pink),
 ];

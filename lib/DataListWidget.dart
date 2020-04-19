@@ -1,14 +1,35 @@
 import 'package:agile_cards/agileCard.dart';
 import 'package:agile_cards/dataText.dart';
 import 'package:flutter/material.dart';
-
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 class DataListWidget extends StatelessWidget {
-  const DataListWidget({
+  DataListWidget({
     Key key,
     @required this.dataText,
   }) : super(key: key);
 
   final List<DataText> dataText;
+
+  final List<String> products = [
+      "Test1.1",
+      "Test2",
+      "Test3",
+      "Test1",
+      "Test2",
+      "Test3",
+      "Test1",
+      "Test2",
+      "Test3",
+      "Test1",
+      "Test2",
+      "Test3",
+      "Test1",
+      "Test2",
+      "Test33",
+    ];
+    final ItemScrollController itemScrollController = ItemScrollController();
+    final ItemPositionsListener itemPositionsListener =
+        ItemPositionsListener.create();
 
   @override
   Widget build(BuildContext context) {
@@ -18,23 +39,54 @@ class DataListWidget extends StatelessWidget {
     var headerAgileValues = "Agile Values";
     var headerAgilePrinciples = "Agile Principles";
 
-    return Column(
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: DataCard(headerCard: headerAgileValues, dataCard: dataValues),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: DataCard(
-              headerCard: headerAgilePrinciples, dataCard: dataPrinciples),
-        ),
-      ],
-    );
+    var cardList = [
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: DataCard(headerCard: headerAgileValues, dataCard: dataValues),
+      ),
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: DataCard(
+            headerCard: headerAgilePrinciples, dataCard: dataPrinciples),
+      ),
+    ];
 
-    // return Column(
-    //   children:dataPrinciples.map((element) => AgileCard(dataText: element)).toList(),
-    //   );
+    return Column(
+      children: cardList,
+    );
+//TODO: Need to try and fix the rendering issues with the ScrollablePositionedList
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisSize: MainAxisSize.max,
+      
+      children: <Widget>[
+          SizedBox(
+           height: 5000,
+           width:5000,
+            child: ScrollablePositionedList.builder(
+              itemCount: products.length,
+              itemBuilder: (BuildContext ctxt, int index) {
+                return Padding(
+                  padding: const EdgeInsets.all(88.0),
+                  child: new Card(
+                    
+                    child: DataCard(
+            headerCard: headerAgilePrinciples, dataCard: dataPrinciples),
+                    ),
+                );
+              },
+              itemScrollController: itemScrollController,
+              itemPositionsListener: itemPositionsListener,
+            ),
+          )
+        ]);
+
+    return Column(children: <Widget>[
+              Text('Some awesome text'),
+              Text('Some more text'),
+              ]);
+    
   }
 }
 
