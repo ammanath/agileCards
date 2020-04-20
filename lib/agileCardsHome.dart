@@ -36,9 +36,10 @@ class AgileCardsHome extends StatelessWidget {
             icon: Icon(choices[0].icon),
             color: choices[0].color,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => WidgetsPage()));
-            },
+              // Navigator.push(context,
+              //     MaterialPageRoute(builder: (context) => WidgetsPage()));
+              itemScrollController.jumpTo(              index: 1,            );
+              },
           ),
           // action button
           IconButton(
