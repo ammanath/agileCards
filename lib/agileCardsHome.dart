@@ -28,7 +28,9 @@ class AgileCardsHome extends StatelessWidget {
     final ItemScrollController itemScrollController = ItemScrollController();
     final ItemPositionsListener itemPositionsListener =
         ItemPositionsListener.create();
-
+    var dlw = DataListWidget(
+      dataText: dataText1,
+    );
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(title: Text('Agile Cards'), actions: <Widget>[
@@ -38,8 +40,10 @@ class AgileCardsHome extends StatelessWidget {
             onPressed: () {
               // Navigator.push(context,
               //     MaterialPageRoute(builder: (context) => WidgetsPage()));
-              itemScrollController.jumpTo(              index: 1,            );
-              },
+              dlw.itemScrollController.jumpTo(
+                index: 1,
+              );
+            },
           ),
           // action button
           IconButton(
@@ -51,7 +55,7 @@ class AgileCardsHome extends StatelessWidget {
           ),
         ]),
         body: SingleChildScrollView(
-           child: DataListWidget(dataText: dataText1,)
+          child: dlw,
         ),
         backgroundColor: Colors.lightBlue[800],
       ),
