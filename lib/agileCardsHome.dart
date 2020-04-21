@@ -8,26 +8,7 @@ class AgileCardsHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<DataText> dataText1 = getAgileValues();
-    List<String> products = [
-      "Test1.1",
-      "Test2",
-      "Test3",
-      "Test1",
-      "Test2",
-      "Test3",
-      "Test1",
-      "Test2",
-      "Test3",
-      "Test1",
-      "Test2",
-      "Test3",
-      "Test1",
-      "Test2",
-      "Test33",
-    ];
-    final ItemScrollController itemScrollController = ItemScrollController();
-    final ItemPositionsListener itemPositionsListener =
-        ItemPositionsListener.create();
+    ItemPositionsListener.create();
     var dlw = DataListWidget(
       dataText: dataText1,
     );
@@ -38,11 +19,9 @@ class AgileCardsHome extends StatelessWidget {
             icon: Icon(choices[0].icon),
             color: choices[0].color,
             onPressed: () {
-              // Navigator.push(context,
-              //     MaterialPageRoute(builder: (context) => WidgetsPage()));
-              dlw.itemScrollController.jumpTo(
-                index: 1,
-              );
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => WidgetsPage()));
+              
             },
           ),
           // action button
@@ -50,7 +29,9 @@ class AgileCardsHome extends StatelessWidget {
             icon: Icon(choices[1].icon),
             color: choices[0].color,
             onPressed: () {
-              //_select(choices[1]);
+              dlw.itemScrollController.jumpTo(
+                index: 1,
+              );
             },
           ),
         ]),

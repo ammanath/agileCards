@@ -47,12 +47,10 @@ class DataListWidget extends StatelessWidget {
     // return Column(
     //   children: cardList,
     // );
-//TODO: Implement the naviagation menu to the next card
     return Column(
       children: <Widget>[
           SizedBox(
            height: 1000,
-           //width:2000,
             child: ScrollablePositionedList.builder(
               itemCount: cardList.length,
               itemBuilder: (BuildContext ctxt, int index) {
@@ -64,11 +62,6 @@ class DataListWidget extends StatelessWidget {
           )
         ]);
 
-    return Column(children: <Widget>[
-              Text('Some awesome text'),
-              Text('Some more text'),
-              ]);
-    
   }
 }
 
