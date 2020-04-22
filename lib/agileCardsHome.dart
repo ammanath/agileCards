@@ -7,7 +7,9 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 class AgileCardsHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     List<DataText> dataText1 = getAgileValues();
+
     ItemPositionsListener.create();
     var dlw = DataListWidget(
       dataText: dataText1,
@@ -97,6 +99,11 @@ class AgileCardsHome extends StatelessWidget {
       DataText(iconPrinciple, ['Continually ', 'seeking excellence']),
       DataText(
           iconPrinciple, ['Harnessing change ', 'for a competitive advantage']),
+      DataText(iconPrinciple, ['Define Value',' ']),
+      DataText(iconPrinciple, ['Map the Value Stream',' ']),
+      DataText(iconPrinciple, ['Create Flow',' ']),
+      DataText(iconPrinciple, ['Establish Pull',' ']),    
+      DataText(iconPrinciple, ['Pursue Perfection',' ']),    
     ];
     return dataText1;
   }
