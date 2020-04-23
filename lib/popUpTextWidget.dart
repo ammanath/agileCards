@@ -3,8 +3,8 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PopUpTextDisplay extends StatelessWidget {
-  const PopUpTextDisplay({
+class PopUpTextWidget extends StatelessWidget {
+  const PopUpTextWidget({
     Key key,
     @required this.dataText,
   }) : super(key: key);

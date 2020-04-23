@@ -1,4 +1,4 @@
-import 'package:agile_cards/agileCardsHome.dart';
+import 'package:agile_cards/agileCardsHomeWidget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class AgileCardsApp extends StatelessWidget {
         primarySwatch: Colors.lightBlue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: AgileCardsHome(),
+      home: AgileCardsHomeWidget(),
       debugShowCheckedModeBanner: false,
     );
   }

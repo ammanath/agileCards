@@ -1,8 +1,8 @@
 import 'package:agile_cards/dataText.dart';
-import 'package:agile_cards/popUpTextDisplay.dart';
+import 'package:agile_cards/popUpTextWidget.dart';
 import 'package:flutter/material.dart';
-class AgileCard extends StatelessWidget {
-  const AgileCard({
+class AgileCardWidget extends StatelessWidget {
+  const AgileCardWidget({
     Key key,
     @required this.dataText,
   }) : super(key: key);
@@ -32,7 +32,7 @@ class AgileCard extends StatelessWidget {
                     showDialog(
                         context: context,
                         builder: (context) {
-                          return PopUpTextDisplay(dataText: dataText);
+                          return PopUpTextWidget(dataText: dataText);
                         }),
                   }),
           color: Colors.lightBlue[600],

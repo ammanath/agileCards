@@ -1,4 +1,4 @@
-import 'package:agile_cards/agileCard.dart';
+import 'package:agile_cards/agileCardWidget.dart';
 import 'package:agile_cards/dataText.dart';
 import 'package:agile_cards/headerTextWidget.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +25,7 @@ class DataCardWidget extends StatelessWidget {
             )
           ])
             ..addAll(dataCard
-                .map((element) => AgileCard(dataText: element))
+                .map((element) => AgileCardWidget(dataText: element))
                 .toList()),
         ));
   }
