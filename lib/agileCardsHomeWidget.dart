@@ -73,7 +73,7 @@ class AgileCardsHomeWidget extends StatelessWidget {
         builder: (context) {
           return AlertDialog(
             title: Center(child: Text("About Agile Cards")),
-            content: Text("A quick primer about Agile Values and Principles"),
+            content: Text("A quick primer about Agile Values and Principles \nThis is the first version of the App. Future versions will cover other specific Agile and Lean s/w development frameworks"),
             elevation: 24.0,
             backgroundColor: Colors.blue,
             actions: <Widget>[
