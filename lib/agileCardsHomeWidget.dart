@@ -9,7 +9,7 @@ class AgileCardsHomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<DataText> dataText1 = DataValues().getAgileValues();
-    
+
     var dlw = DataListWidget(
       dataText: dataText1,
     );
@@ -20,9 +20,16 @@ class AgileCardsHomeWidget extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.star),
             color: Colors.blue[700],
-            onPressed: (){
+            onPressed: () {
               show(context);
-            },    
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.info),
+            color: Colors.blue[700],
+            onPressed: () {
+              showAboutDialog(context);
+            },
           ),
         ]),
         body: SingleChildScrollView(
@@ -33,7 +40,7 @@ class AgileCardsHomeWidget extends StatelessWidget {
     );
   }
 
-void show(BuildContext context) {
+  void show(BuildContext context) {
     showDialog(
         context: context,
         barrierDismissible: true, // set to false if you want to force a rating
@@ -41,7 +48,7 @@ void show(BuildContext context) {
           return RatingDialog(
             icon: const Icon(
               Icons.star,
-              size: 100,   
+              size: 100,
               color: Colors.blue,
             ), // set your own image/icon widget
             title: "Enjoying Agile Cards?",
@@ -55,12 +62,30 @@ void show(BuildContext context) {
               print("onSubmitPressed: rating = $rating");
               LaunchReview.launch();
             },
-           
           );
         });
   }
 
+  void showAboutDialog(BuildContext context) {
+    showDialog(
+        context: context,
+        barrierDismissible: true,
+        builder: (context) {
+          return AlertDialog(
+            title: Center(child: Text("About Agile Cards")),
+            content: Text("A quick primer about Agile Values and Principles"),
+            elevation: 24.0,
+            backgroundColor: Colors.blue,
+            actions: <Widget>[
+              FlatButton(
+                child: Text('Ok'),
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        });
+  }
 }
-
-
-
