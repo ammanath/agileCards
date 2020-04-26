@@ -1,7 +1,7 @@
 import 'package:agile_cards/dataCardWidget.dart';
 import 'package:agile_cards/dataText.dart';
 import 'package:flutter/material.dart';
-import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+
 class DataListWidget extends StatelessWidget {
   DataListWidget({
     Key key,
@@ -9,10 +9,6 @@ class DataListWidget extends StatelessWidget {
   }) : super(key: key);
 
   final List<DataText> dataText;
-
-    final ItemScrollController itemScrollController = ItemScrollController();
-    final ItemPositionsListener itemPositionsListener =
-        ItemPositionsListener.create();
 
   @override
   Widget build(BuildContext context) {
@@ -24,27 +20,12 @@ class DataListWidget extends StatelessWidget {
 
     var cardList = [
       DataCardWidget(headerCard: headerAgileValues, dataCard: dataValues),
-      DataCardWidget(headerCard: headerAgilePrinciples, dataCard: dataPrinciples),
+      DataCardWidget(
+          headerCard: headerAgilePrinciples, dataCard: dataPrinciples),
     ];
 
-    // return Column(
-    //   children: cardList,
-    // );
     return Column(
-      children: <Widget>[
-          SizedBox(
-           height: 1000,
-            child: ScrollablePositionedList.builder(
-              itemCount: cardList.length,
-              itemBuilder: (BuildContext ctxt, int index) {
-                return  cardList[index];
-              },
-              itemScrollController: itemScrollController,
-              itemPositionsListener: itemPositionsListener,
-            ),
-          )
-        ]);
-
+      children: cardList,
+    );
   }
 }
-

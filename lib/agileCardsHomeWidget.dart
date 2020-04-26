@@ -4,14 +4,12 @@ import 'package:agile_cards/dataValues.dart';
 import 'package:flutter/material.dart';
 import 'package:launch_review/launch_review.dart';
 import 'package:rating_dialog/rating_dialog.dart';
-import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class AgileCardsHomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<DataText> dataText1 = DataValues().getAgileValues();
-
-    ItemPositionsListener.create();
+    
     var dlw = DataListWidget(
       dataText: dataText1,
     );
@@ -57,10 +55,7 @@ void show(BuildContext context) {
               print("onSubmitPressed: rating = $rating");
               LaunchReview.launch();
             },
-            // onAlternativePressed: () {
-            //   print("onAlternativePressed: do something");
-            //   // TODO: maybe you want the user to contact you instead of rating a bad review
-            // },
+           
           );
         });
   }
