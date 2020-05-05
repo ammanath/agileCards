@@ -1,6 +1,7 @@
 import 'package:agile_cards/DataListWidget.dart';
 import 'package:agile_cards/dataText.dart';
 import 'package:agile_cards/dataValues.dart';
+import 'package:agile_cards/itemData.dart';
 import 'package:flutter/material.dart';
 import 'package:launch_review/launch_review.dart';
 import 'package:rating_dialog/rating_dialog.dart';
@@ -8,10 +9,10 @@ import 'package:rating_dialog/rating_dialog.dart';
 class AgileCardsHomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<DataText> dataText1 = DataValues().getAgileValues();
+    List<ItemData> dataText1 = DataValues().getItemValues();
 
     var dlw = DataListWidget(
-      dataText: dataText1,
+      itemDataList: dataText1,
     );
 
     return SafeArea(

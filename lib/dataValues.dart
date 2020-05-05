@@ -62,7 +62,6 @@ class DataValues {
     return dataText1;
   }
 
-//TODO: We need to refactor the DataText to be replaced by ItemData data structure.
   List<ItemData> getItemValues() {
     var agileValues = [
       ItemData(
