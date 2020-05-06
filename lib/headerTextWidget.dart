@@ -13,9 +13,9 @@ class HeaderTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       headerCardTitle,
-      textAlign: TextAlign.left,
+      textAlign: TextAlign.center,
       style: TextStyle(
-        color: Colors.blue[200],
+        color: Colors.blue[100],
         fontSize: 24,
         letterSpacing: 8.0,
         fontWeight: FontWeight.bold,

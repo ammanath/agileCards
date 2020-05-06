@@ -1,4 +1,5 @@
 import 'package:agile_cards/dataText.dart';
+import 'package:agile_cards/itemData.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,11 +10,11 @@ class PopUpTextWidget extends StatelessWidget {
     @required this.dataText,
   }) : super(key: key);
 
-  final DataText dataText;
+  final ItemData dataText;
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
+    return AlertDialog( 
         backgroundColor: Colors.blue[200],
         content: TypewriterAnimatedTextKit(
           text: ["${dataText.primaryText} ${dataText.secondaryText}"],

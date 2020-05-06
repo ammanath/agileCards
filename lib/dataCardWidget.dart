@@ -7,25 +7,25 @@ import 'package:flutter/material.dart';
 class DataCardWidget extends StatelessWidget {
   const DataCardWidget({
     Key key,
-    @required this.dataCardList,
+    @required this.itemList,
   }) : super(key: key);
 
-  final Iterable<ItemData> dataCardList;
+  final Iterable<ItemData> itemList;
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-        color: Colors.lightBlue[800],
-        child: Column(
-          children: List.from([
-            Padding(
-              padding: const EdgeInsets.fromLTRB(8.0, 18.0, 0.0, 6.0),
-              child: HeaderTextWidget(headerCardTitle: dataCardList.first.title),
-            )
-          ])
-            ..addAll(dataCardList
-                .map((element) => Text(element.primaryText))//AgileCardWidget(dataText: element))
-                .toList()),
+    var children = <Widget>[];
+    itemList.forEach((element) {
+      if (element.type == 'title') {
+        children.add(Padding(
+          padding: const EdgeInsets.fromLTRB(8.0, 18.0, 0.0, 8.0),
+          child: HeaderTextWidget(headerCardTitle: itemList.first.title),
         ));
+      } else if (element.type == 'card') {
+        children.add(AgileCardWidget(itemData: element));
+      }
+    });
+    return Card(
+        color: Colors.lightBlue[800], child: Column(children: children));
   }
 }

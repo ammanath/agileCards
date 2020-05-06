@@ -1,13 +1,14 @@
 import 'package:agile_cards/dataText.dart';
+import 'package:agile_cards/itemData.dart';
 import 'package:agile_cards/popUpTextWidget.dart';
 import 'package:flutter/material.dart';
 class AgileCardWidget extends StatelessWidget {
   const AgileCardWidget({
     Key key,
-    @required this.dataText,
+    @required this.itemData,
   }) : super(key: key);
 
-  final DataText dataText;
+  final ItemData itemData;
 
   @override
   Widget build(BuildContext context) {
@@ -20,21 +21,23 @@ class AgileCardWidget extends StatelessWidget {
       child: Card(
         child: Container(
           child: ListTile(
-              leading: Icon(dataText.icon),
+              leading: Icon(itemData.refIcon),
               title: Text.rich(
                 TextSpan(
-                  text: dataText.primaryText,
+                  text: itemData.primaryText,
                   style: TextStyle(fontSize: 25, color: Colors.black),
-                  children: getSecondaryText(secondaryStyle, dataText),
-                ),
-              ),
+                  children: [TextSpan(
+                    text:itemData.secondaryText,
+                    style: secondaryStyle)],
+                
+                ),),
               onTap: () => {
                     showDialog(
                         context: context,
                         builder: (context) {
-                          return PopUpTextWidget(dataText: dataText);
+                          return PopUpTextWidget( dataText: itemData,);
                         }),
-                  }),
+                  },),
           color: Colors.lightBlue[600],
         ),
       ),
