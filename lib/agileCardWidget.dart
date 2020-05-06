@@ -21,7 +21,7 @@ class AgileCardWidget extends StatelessWidget {
       child: Card(
         child: Container(
           child: ListTile(
-              leading: Icon(itemData.refIcon),
+              leading: itemData.refIcon,
               title: Text.rich(
                 TextSpan(
                   text: itemData.primaryText,

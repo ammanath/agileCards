@@ -1,9 +1,11 @@
+import 'package:flutter/cupertino.dart';
+
 class ItemData {
   String title;
   String primaryText;
   String secondaryText;
   String description;
-  var refIcon;
+  Icon refIcon;
   String refUrl;
   String type;
 
