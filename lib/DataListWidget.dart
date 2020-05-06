@@ -26,11 +26,11 @@ class DataListWidget extends StatelessWidget {
         temp.add(element);
       } 
       if ((title != element.title) || element == last) {
-        widgets.addAll(convertToWidgets(temp));
+        //widgets.addAll(convertToWidgets(temp));
         //TODO:Add Data Card Widgets
-        //dataCardWidget = DataCardWidget(dataCardList: temp);
-        //widgets.add(dataCardWidget);
-        temp.clear();
+        dataCardWidget = DataCardWidget(dataCardList: temp);
+        widgets.add(dataCardWidget);
+        temp=[];
         title = element.title;       
         temp.add(element);
       }
