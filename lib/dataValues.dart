@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:agile_cards/dataText.dart';
 import 'package:agile_cards/itemData.dart';
 import 'package:flutter/material.dart';
@@ -57,47 +59,47 @@ class DataValues {
       DataText(iconPrinciple, ['Continually ', 'seeking excellence']),
       DataText(
           iconPrinciple, ['Harnessing change ', 'for a competitive advantage']),
-
     ];
     return dataText1;
   }
 
   List<ItemData> getItemValues() {
+    int iconCode = 58840;
     var agileValues = [
       ItemData(
           title: 'Agile Values',
           primaryText: '',
           secondaryText: '',
           description: '',
-          refIcon: Icons.details,
+          refIcon: Icons.work,
           type: 'title'),
       ItemData(
           title: 'Agile Values',
           primaryText: 'Working Software',
           secondaryText: 'over comprehensive documentation.',
           description: '',
-          refIcon: Icons.details,
+          refIcon: Icons.work,
           type: 'card'),
       ItemData(
           title: 'Agile Values',
           primaryText: 'Responding to change',
           secondaryText: 'over following a plan.',
           description: '',
-          refIcon: Icons.details,
+          refIcon: IconData(iconCode, fontFamily: 'MaterialIcons'),
           type: 'card'),
       ItemData(
           title: 'Agile Values',
           primaryText: 'Individuals and interactions',
           secondaryText: 'over processes and tools.',
           description: '',
-          refIcon: Icons.details,
+          refIcon: IconData(iconCode+1, fontFamily: 'MaterialIcons',  ),
           type: 'card'),
       ItemData(
           title: 'Agile Values',
           primaryText: 'Customer collaboration',
           secondaryText: 'over contract negotiaion.',
           description: '',
-          refIcon: Icons.details,
+          refIcon: getRandomIcon(),
           type: 'card'),
     ];
 
@@ -107,7 +109,7 @@ class DataValues {
           primaryText: '',
           secondaryText: '',
           description: '',
-          refIcon: Icons.details,
+          refIcon: Icons.flash_on,
           type: 'title'),
       ItemData(
           title: 'Agile Principles',
@@ -115,19 +117,77 @@ class DataValues {
           secondaryText:
               'through early and continuos delivery of valuable work',
           description: '',
-          refIcon: Icons.details,
+          refIcon: null,
           type: 'card'),
       ItemData(
           title: 'Agile Principles',
           primaryText: 'Breaking big work down',
           secondaryText: 'into smaller tasks that can be completed quickly',
           description: '',
-          refIcon: Icons.details,
+          refIcon: Icons.tonality,
           type: 'card'),
       ItemData(
           title: 'Agile Principles',
           primaryText: 'Recognizing',
           secondaryText: 'that the best work emerges from self-organized teams',
+          description: '',
+          refIcon: Icons.details,
+          type: 'card'),
+      ItemData(
+          title: 'Agile Principles',
+          primaryText: 'Providing motivated individuals',
+          secondaryText:
+              'with the envt. and support they need and trusting them to get the job done',
+          description: '',
+          refIcon: Icons.details,
+          type: 'card'),
+      ItemData(
+          title: 'Agile Principles',
+          primaryText: 'Creating processes',
+          secondaryText: 'that promote sustainable efforts',
+          description: '',
+          refIcon: Icons.details,
+          type: 'card'),
+      ItemData(
+          title: 'Agile Principles',
+          primaryText: 'Maintaining a constant pace',
+          secondaryText: 'for completed work',
+          description: '',
+          refIcon: Icons.details,
+          type: 'card'),
+      ItemData(
+          title: 'Agile Principles',
+          primaryText: 'Welcoming changing requirements,',
+          secondaryText: 'even late in a project',
+          description: '',
+          refIcon: Icons.details,
+          type: 'card'),
+      ItemData(
+          title: 'Agile Principles',
+          primaryText: 'Assembling the project team and business owners',
+          secondaryText: 'on a daily basis throughout the project',
+          description: '',
+          refIcon: Icons.details,
+          type: 'card'),
+      ItemData(
+          title: 'Agile Principles',
+          primaryText: 'Having the team reflect at regular intervals',
+          secondaryText:
+              'on how to become more effective, then tuning and adjusting behaviour accordingly',
+          description: '',
+          refIcon: Icons.details,
+          type: 'card'),
+      ItemData(
+          title: 'Agile Principles',
+          primaryText: 'Measuring progress',
+          secondaryText: 'by the amount of completed work',
+          description: '',
+          refIcon: Icons.details,
+          type: 'card'),
+      ItemData(
+          title: 'Agile Principles',
+          primaryText: 'Harnessing change',
+          secondaryText: 'for a competitive advantage',
           description: '',
           refIcon: Icons.details,
           type: 'card'),
@@ -139,7 +199,7 @@ class DataValues {
           primaryText: '',
           secondaryText: '',
           description: '',
-          refIcon: Icons.details,
+          refIcon: Icons.person,
           type: 'title'),
       ItemData(
           title: 'Extreme Activities',
@@ -147,7 +207,7 @@ class DataValues {
           secondaryText:
               'The only truly important product of the system development process is code',
           description: '',
-          refIcon: Icons.details,
+          refIcon: null,
           type: 'card'),
       ItemData(
           title: 'Extreme Activities',
@@ -155,7 +215,7 @@ class DataValues {
           secondaryText:
               'If a little testing can eliminate a few flaws, a lot of testing can eliminate many more flaws.',
           description: '',
-          refIcon: Icons.details,
+          refIcon: null,
           type: 'card'),
       ItemData(
           title: 'Extreme Activities',
@@ -174,6 +234,19 @@ class DataValues {
           refIcon: Icons.details,
           type: 'card'),
     ];
+
     return agileValues + agilePrinciples + extremeActivities;
   }
+
+  Icon getRandomIcon(){
+    List<Color> clrs = [Colors.red, Colors.amber, Colors.green, Colors.lime, Colors.orange, Colors.black];
+    int rndColor = Random().nextInt(clrs.length);
+    int codePoint = 58000 + Random().nextInt(1000);
+    var icon = Icon(IconData(codePoint, fontFamily: 'MaterialIcons'),color: clrs[rndColor], size: 44,);
+    return icon;
+  }
+
+  
+
 }
+

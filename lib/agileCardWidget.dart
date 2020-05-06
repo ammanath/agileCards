@@ -27,7 +27,7 @@ class AgileCardWidget extends StatelessWidget {
                   text: itemData.primaryText,
                   style: TextStyle(fontSize: 25, color: Colors.black),
                   children: [TextSpan(
-                    text:itemData.secondaryText,
+                    text:' ' + itemData.secondaryText ,
                     style: secondaryStyle)],
                 
                 ),),
@@ -44,12 +44,5 @@ class AgileCardWidget extends StatelessWidget {
     );
   }
 
-  List<InlineSpan> getSecondaryText(
-      TextStyle secondaryStyle, DataText dataText1) {
-    return dataText1.textList
-        .map((elt) => (TextSpan(text: elt, style: secondaryStyle)))
-        .toList()
-          ..removeAt(0);
 
-  }
 }

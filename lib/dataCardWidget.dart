@@ -15,13 +15,18 @@ class DataCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var children = <Widget>[];
+    var defaultIcon;
     itemList.forEach((element) {
       if (element.type == 'title') {
         children.add(Padding(
           padding: const EdgeInsets.fromLTRB(8.0, 18.0, 0.0, 8.0),
-          child: HeaderTextWidget(headerCardTitle: itemList.first.title),
+          child: HeaderTextWidget(headerCardTitle: element.title),
         ));
+        defaultIcon = element.refIcon;
       } else if (element.type == 'card') {
+        if(element.refIcon==null){
+          element.refIcon=defaultIcon;
+        }
         children.add(AgileCardWidget(itemData: element));
       }
     });
