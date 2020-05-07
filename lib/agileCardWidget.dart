@@ -13,8 +13,8 @@ class AgileCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var secondaryStyle = TextStyle(
-      fontSize: 14,
-      color: Colors.black38,
+      fontSize: 18,
+      color: Colors.black45,
     );
     return Padding(
       padding: const EdgeInsets.all(8.0),
