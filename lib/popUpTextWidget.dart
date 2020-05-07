@@ -1,4 +1,3 @@
-import 'package:agile_cards/dataText.dart';
 import 'package:agile_cards/itemData.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
@@ -17,14 +16,14 @@ class PopUpTextWidget extends StatelessWidget {
     return AlertDialog( 
         backgroundColor: Colors.blue[200],
         content: TypewriterAnimatedTextKit(
-          text: ["${dataText.primaryText} ${dataText.secondaryText}"],
+          text: ["${dataText.primaryText} ${dataText.secondaryText} ${dataText.description}"],
           totalRepeatCount: 4,
           pause: Duration(milliseconds: 1500),
           speed: Duration(milliseconds: 60),
           textStyle: GoogleFonts.vt323(
             color: Colors.blue,
             letterSpacing: .5,
-            fontSize: 32,
+            fontSize: dataText.type=='title'?22:32,
           ),
           displayFullTextOnTap: true,
           stopPauseOnTap: true,

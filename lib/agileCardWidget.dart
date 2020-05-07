@@ -36,7 +36,8 @@ class AgileCardWidget extends StatelessWidget {
                         builder: (context) {
                           return PopUpTextWidget( dataText: itemData,);
                         }),
-                  },),
+                  },
+                  ),
           color: Colors.lightBlue[600],
         ),
       ),
