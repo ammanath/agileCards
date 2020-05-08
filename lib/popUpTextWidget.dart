@@ -13,20 +13,60 @@ class PopUpTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog( 
-        backgroundColor: Colors.blue[200],
-        content: TypewriterAnimatedTextKit(
-          text: ["${dataText.primaryText} ${dataText.secondaryText} ${dataText.description}"],
-          totalRepeatCount: 4,
-          pause: Duration(milliseconds: 1500),
-          speed: Duration(milliseconds: 60),
-          textStyle: GoogleFonts.vt323(
-            color: Colors.blue,
-            letterSpacing: .5,
-            fontSize: dataText.type=='title'?22:32,
-          ),
-          displayFullTextOnTap: true,
-          stopPauseOnTap: true,
-        ));
+    return AlertDialog(
+        backgroundColor: Colors.indigo[50],
+        content: DisplayWidget(dataText: dataText));
   }
 }
+
+class DisplayWidget extends StatelessWidget {
+  const DisplayWidget({
+    Key key,
+    @required this.dataText,
+  }) : super(key: key);
+
+  final ItemData dataText;
+
+  @override
+  Widget build(BuildContext context) {
+    if (dataText.type == 'title') {
+      return normalTextDialog();
+    } else {
+      return buildTypewriterAnimatedText();
+    }
+  }
+
+  TypewriterAnimatedTextKit buildTypewriterAnimatedText() {
+    return TypewriterAnimatedTextKit(
+      text: [
+        "${dataText.primaryText} ${dataText.secondaryText} ${dataText.description}"
+      ],
+      totalRepeatCount: 4,
+      pause: Duration(milliseconds: 1500),
+      speed: Duration(milliseconds: 60),
+      textStyle: GoogleFonts.vt323(
+        color: Colors.blue,
+        letterSpacing: .5,
+        fontSize: dataText.type == 'title' ? 22 : 32,
+      ),
+      displayFullTextOnTap: true,
+      stopPauseOnTap: true,
+    );
+  }
+
+  Widget normalTextDialog() {
+    return Text.rich(
+                TextSpan(
+                  text: dataText.description[0],
+                  style: TextStyle(fontSize: 25, color: Colors.black),
+                  children: [TextSpan(
+                    text:' ' + dataText.description.substring(1) ,
+                    style: TextStyle(fontSize: 20, color: Colors.black54),)],
+
+                ),
+                
+                );
+  }
+}
+
+
