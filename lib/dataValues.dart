@@ -9,7 +9,8 @@ class DataValues {
           title: 'Agile Values',
           primaryText: '',
           secondaryText: '',
-          description: 'Agile software development comprises various approaches to software development under which requirements and solutions evolve through the collaborative effort of self-organizing and cross-functional teams and their customers. It advocates adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages rapid and flexible response to change. The term agile was popularized, in this context, by the Manifesto for Agile Software Development. The values and principles espoused in this manifesto were derived from and underpin a broad range of software development frameworks, including Scrum and Kanban.',
+          description:
+              'Agile software development comprises various approaches to software development under which requirements and solutions evolve through the collaborative effort of self-organizing and cross-functional teams and their customers. It advocates adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages rapid and flexible response to change. The term agile was popularized, in this context, by the Manifesto for Agile Software Development. The values and principles espoused in this manifesto were derived from and underpin a broad range of software development frameworks, including Scrum and Kanban.',
           refIcon: Icon(
             Icons.favorite,
             color: Colors.pink,
@@ -51,7 +52,8 @@ class DataValues {
           title: 'Agile Principles',
           primaryText: '',
           secondaryText: '',
-          description: 'Agile software development comprises various approaches to software development under which requirements and solutions evolve through the collaborative effort of self-organizing and cross-functional teams and their customers. It advocates adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages rapid and flexible response to change. The term agile was popularized, in this context, by the Manifesto for Agile Software Development. The values and principles espoused in this manifesto were derived from and underpin a broad range of software development frameworks, including Scrum and Kanban.',
+          description:
+              'Agile software development comprises various approaches to software development under which requirements and solutions evolve through the collaborative effort of self-organizing and cross-functional teams and their customers. It advocates adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages rapid and flexible response to change. The term agile was popularized, in this context, by the Manifesto for Agile Software Development. The values and principles espoused in this manifesto were derived from and underpin a broad range of software development frameworks, including Scrum and Kanban.',
           refIcon: getRandomIcon(),
           type: 'title'),
       ItemData(
@@ -141,7 +143,8 @@ class DataValues {
           title: 'Extreme Activities',
           primaryText: '',
           secondaryText: '',
-          description: '',
+          description:
+              'Extreme programming (XP) is a software development methodology which is intended to improve software quality and responsiveness to changing customer requirements. As a type of agile software development, it advocates frequent "releases" in short development cycles, which is intended to improve productivity and introduce checkpoints at which new customer requirements can be adopted.',
           refIcon: getRandomIcon(),
           type: 'title'),
       ItemData(
@@ -178,7 +181,113 @@ class DataValues {
           type: 'card'),
     ];
 
-    return agileValues + agilePrinciples + extremeActivities;
+    var extremeValues = [
+      ItemData(
+          title: 'Extreme Values',
+          primaryText: '',
+          secondaryText: '',
+          description:
+              'Extreme programming (XP) is a software development methodology which is intended to improve software quality and responsiveness to changing customer requirements. As a type of agile software development, it advocates frequent "releases" in short development cycles, which is intended to improve productivity and introduce checkpoints at which new customer requirements can be adopted.',
+          refIcon: getRandomIcon(),
+          type: 'title'),
+      ItemData(
+          title: 'Extreme Values',
+          primaryText: 'Communication',
+          secondaryText:
+              'All developers have a shared view of the system which matches the view held by the users of the system',
+          description: '',
+          refIcon: null,
+          type: 'card'),
+      ItemData(
+          title: 'Extreme Values',
+          primaryText: 'Simplicity',
+          secondaryText:
+              'This is sometimes summed up as the "You aren\'t gonna need it" (YAGNI) approach.',
+          description: '',
+          refIcon: null,
+          type: 'card'),
+      ItemData(
+          title: 'Extreme Values',
+          primaryText: 'Feedback',
+          secondaryText:
+              'To quote Kent Beck, "Optimism is an occupational hazard of programming. Feedback is the treatment."',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: 'Extreme Values',
+          primaryText: 'Courage',
+          secondaryText:
+              'Always design and code for today and not for tomorrow. Courage to refacotr, to throw code away, to persist in solving complex problems',
+          description: '',
+          refIcon: getRandomIcon(true),
+          type: 'card'),
+      ItemData(
+          title: 'Extreme Values',
+          primaryText: 'Respect',
+          secondaryText:
+              'The respect value includes respect for others as well as self-respect.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+    ];
+
+    var extremeRules = [
+      ItemData(
+          title: 'Extreme Rules',
+          primaryText: '',
+          secondaryText: '',
+          description:
+              'The first version of rules for XP was published in 1999 by Don Wells at the XP website. 29 rules are given in the categories of planning, managing, designing, coding, and testing. Planning, managing and designing are called out explicitly to counter claims that XP doesn\'t support those activities. Another version of XP rules was proposed by Ken Auer in XP/Agile Universe 2003. He felt XP was defined by its rules, not its practices (which are subject to more variation and ambiguity). He defined two categories: "Rules of Engagement" which dictate the environment in which software development can take place effectively, and "Rules of Play" which define the minute-by-minute activities and rules within the framework of the Rules of Engagement.',
+          refIcon: getRandomIcon(),
+          type: 'title'),
+      ItemData(
+          title: 'Extreme Rules',
+          primaryText: 'Communication',
+          secondaryText:
+              'All developers have a shared view of the system which matches the view held by the users of the system',
+          description: '',
+          refIcon: null,
+          type: 'card'),
+      ItemData(
+          title: 'Extreme Rules',
+          primaryText: 'Simplicity',
+          secondaryText:
+              'This is sometimes summed up as the "You aren\'t gonna need it" (YAGNI) approach.',
+          description: '',
+          refIcon: null,
+          type: 'card'),
+      ItemData(
+          title: 'Extreme Rules',
+          primaryText: 'Feedback',
+          secondaryText:
+              'To quote Kent Beck, "Optimism is an occupational hazard of programming. Feedback is the treatment."',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: 'Extreme Rules',
+          primaryText: 'Courage',
+          secondaryText:
+              'Always design and code for today and not for tomorrow. Courage to refacotr, to throw code away, to persist in solving complex problems',
+          description: '',
+          refIcon: getRandomIcon(true),
+          type: 'card'),
+      ItemData(
+          title: 'Extreme Rules',
+          primaryText: 'Respect',
+          secondaryText:
+              'The respect value includes respect for others as well as self-respect.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+    ];
+
+    return agileValues +
+        agilePrinciples +
+        extremeActivities +
+        extremeValues +
+        extremeRules;
   }
 
   Icon getRandomIcon([bool randomColor]) {

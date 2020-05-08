@@ -55,18 +55,19 @@ class DisplayWidget extends StatelessWidget {
   }
 
   Widget normalTextDialog() {
-    return Text.rich(
-                TextSpan(
-                  text: dataText.description[0],
-                  style: TextStyle(fontSize: 25, color: Colors.black),
-                  children: [TextSpan(
-                    text:' ' + dataText.description.substring(1) ,
-                    style: TextStyle(fontSize: 20, color: Colors.black54),)],
-
-                ),
-                
-                );
+    return SingleChildScrollView(
+      child: Text.rich(
+        TextSpan(
+          text: dataText.description[0],
+          style: TextStyle(fontSize: 25, color: Colors.black),
+          children: [
+            TextSpan(
+              text: ' ' + dataText.description.substring(1),
+              style: TextStyle(fontSize: 20, color: Colors.black54),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
-
-
