@@ -31,7 +31,10 @@ class DisplayWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     if (dataText.type == 'title') {
       return normalTextDialog();
-    } else {
+    } else if(dataText.secondaryText.length>200){
+      return normalTextDialog();
+    }
+    else {
       return buildTypewriterAnimatedText();
     }
   }
@@ -55,14 +58,15 @@ class DisplayWidget extends StatelessWidget {
   }
 
   Widget normalTextDialog() {
+    var text = '${dataText.primaryText==''?'':dataText.primaryText + ' '}${dataText.secondaryText==''?'':dataText.secondaryText + ' '}${dataText.description}';
     return SingleChildScrollView(
       child: Text.rich(
         TextSpan(
-          text: dataText.description[0],
-          style: TextStyle(fontSize: 25, color: Colors.black),
+          text: text[0],
+          style: TextStyle(fontSize: 35, color: Colors.pink),
           children: [
             TextSpan(
-              text: ' ' + dataText.description.substring(1),
+              text: text.substring(1),
               style: TextStyle(fontSize: 20, color: Colors.black54),
             )
           ],
