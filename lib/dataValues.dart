@@ -266,6 +266,7 @@ class DataValues {
           refIcon: getRandomIcon(),
           type: 'card'),
     ];
+
     var extremePractices = [
       ItemData(
           title: 'Extreme Practices',
@@ -307,6 +308,7 @@ class DataValues {
           refIcon: getRandomIcon(),
           type: 'card'),
     ];
+
     var extremeRules = [
       ItemData(
           title: 'Extreme Rules',
@@ -551,23 +553,6 @@ class DataValues {
           type: 'card'),
     ];
 
-    var dummy = [
-      ItemData(
-          title: 'TTT',
-          primaryText: '',
-          secondaryText: '',
-          description: 'ddd ',
-          refIcon: getRandomIcon(),
-          type: 'title'),
-      ItemData(
-          title: 'TTT',
-          primaryText: 'ppp',
-          secondaryText: '“ssss',
-          description: '',
-          refIcon: getRandomIcon(),
-          type: 'card'),
-    ];
-
     var solidPrinciples = [
       ItemData(
           title: 'SOLID Principles',
@@ -619,10 +604,89 @@ class DataValues {
           type: 'card'),
     ];
 
+    var leanPrinciples = [
+      ItemData(
+          title: 'Lean principles',
+          primaryText: '',
+          secondaryText: '',
+          description:
+              'Lean Software Development (LSD) is an agile framework based on optimizing development time and resources, eliminating waste, and ultimately delivering only what the product needs. "Think big, act small, fail fast; learn rapidly"',
+          refIcon: getRandomIcon(),
+          type: 'title'),
+      ItemData(
+          title: 'Lean principles',
+          primaryText: 'Eliminate waste',
+          secondaryText: 'Lean philosophy regards everything not adding value to the customer as waste (muda). ',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: 'Lean principles',
+          primaryText: 'Amplify learning',
+          secondaryText: 'The learning process is sped up by usage of short iteration cycles – each one coupled with refactoring and integration testing.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: 'Lean principles',
+          primaryText: 'Decide as late as possible',
+          secondaryText: 'delaying decisions as much as possible until they can be made based on facts and not on uncertain assumptions and predictions. ',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: 'Lean principles',
+          primaryText: 'Deliver as fast as possible',
+          secondaryText: 'in order to see and analyze the output at the earliest.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: 'Lean principles',
+          primaryText: 'Empower the team',
+          secondaryText: 'Respecting people and acknowledging their work is one way to empower the team.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: 'Lean principles',
+          primaryText: 'Build integrity in',
+          secondaryText: 'The customer needs to have an overall experience of the System. ',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: 'Lean principles',
+          primaryText: 'Optimize the Whole',
+          secondaryText: 'Modern software systems are not simply the sum of their parts, but also the product of their interactions.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+    ];
+
+    var dummy = [
+      ItemData(
+          title: 'TTT',
+          primaryText: '',
+          secondaryText: '',
+          description: 'ddd ',
+          refIcon: getRandomIcon(),
+          type: 'title'),
+      ItemData(
+          title: 'TTT',
+          primaryText: 'ppp',
+          secondaryText: '“ssss',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+    ];
+
     return agileValues +
         agilePrinciples +
         scrumWorkflow +
         scrumArtifacts +
+        scrumValues +
+        leanPrinciples+
         extremeActivities +
         extremeValues +
         extremePrinciples +
