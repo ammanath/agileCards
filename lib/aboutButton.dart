@@ -15,7 +15,8 @@ class AboutButton extends StatelessWidget {
       },
     );
   }
-
+//TODO: Need to get the right fonts and colors for this. 
+//TODO: Change the OK font size
   void showAboutDialog(BuildContext context) {
     showDialog(
         context: context,
