@@ -20,7 +20,7 @@ class AgileCardsHomeWidget extends StatelessWidget {
         appBar: AppBar(title: Text('S/w Dev Cards'), actions: <Widget>[
           IconButton(
             icon: Icon(Icons.home),
-            color: Colors.blue[700],
+            color: Colors.orange,
             onPressed: () =>
                 Scrollable.ensureVisible(dataKey.currentContext) //Top
             ,
