@@ -616,49 +616,103 @@ class DataValues {
       ItemData(
           title: 'Lean principles',
           primaryText: 'Eliminate waste',
-          secondaryText: 'Lean philosophy regards everything not adding value to the customer as waste (muda). ',
+          secondaryText:
+              'Lean philosophy regards everything not adding value to the customer as waste (muda). ',
           description: '',
           refIcon: getRandomIcon(),
           type: 'card'),
       ItemData(
           title: 'Lean principles',
           primaryText: 'Amplify learning',
-          secondaryText: 'The learning process is sped up by usage of short iteration cycles – each one coupled with refactoring and integration testing.',
+          secondaryText:
+              'The learning process is sped up by usage of short iteration cycles – each one coupled with refactoring and integration testing.',
           description: '',
           refIcon: getRandomIcon(),
           type: 'card'),
       ItemData(
           title: 'Lean principles',
           primaryText: 'Decide as late as possible',
-          secondaryText: 'delaying decisions as much as possible until they can be made based on facts and not on uncertain assumptions and predictions. ',
+          secondaryText:
+              'delaying decisions as much as possible until they can be made based on facts and not on uncertain assumptions and predictions. ',
           description: '',
           refIcon: getRandomIcon(),
           type: 'card'),
       ItemData(
           title: 'Lean principles',
           primaryText: 'Deliver as fast as possible',
-          secondaryText: 'in order to see and analyze the output at the earliest.',
+          secondaryText:
+              'in order to see and analyze the output at the earliest.',
           description: '',
           refIcon: getRandomIcon(),
           type: 'card'),
       ItemData(
           title: 'Lean principles',
           primaryText: 'Empower the team',
-          secondaryText: 'Respecting people and acknowledging their work is one way to empower the team.',
+          secondaryText:
+              'Respecting people and acknowledging their work is one way to empower the team.',
           description: '',
           refIcon: getRandomIcon(),
           type: 'card'),
       ItemData(
           title: 'Lean principles',
           primaryText: 'Build integrity in',
-          secondaryText: 'The customer needs to have an overall experience of the System. ',
+          secondaryText:
+              'The customer needs to have an overall experience of the System. ',
           description: '',
           refIcon: getRandomIcon(),
           type: 'card'),
       ItemData(
           title: 'Lean principles',
           primaryText: 'Optimize the Whole',
-          secondaryText: 'Modern software systems are not simply the sum of their parts, but also the product of their interactions.',
+          secondaryText:
+              'Modern software systems are not simply the sum of their parts, but also the product of their interactions.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+    ];
+
+    var designThinkingPhases = [
+      ItemData(
+          title: 'Design Thinking',
+          primaryText: '',
+          secondaryText: '',
+          description:
+              'Design Thinking is an iterative process in which we seek to understand the user, challenge assumptions, and redefine problems in an attempt to identify alternative strategies and solutions that might not be instantly apparent with our initial level of understanding. ',
+          refIcon: getRandomIcon(),
+          type: 'title'),
+      ItemData(
+          title: 'Design Thinking',
+          primaryText: 'Empathise',
+          secondaryText: 'with your users',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: 'Design Thinking',
+          primaryText: 'Define',
+          secondaryText: 'your users’ needs, their problem, and your insights',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: 'Design Thinking',
+          primaryText: 'Ideate',
+          secondaryText:
+              'by challenging assumptions and creating ideas for innovative solutions',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: 'Design Thinking',
+          primaryText: 'Prototype',
+          secondaryText: 'to start creating solutions',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: 'Design Thinking',
+          primaryText: 'Test',
+          secondaryText: 'try Your Solutions Out',
           description: '',
           refIcon: getRandomIcon(),
           type: 'card'),
@@ -686,7 +740,8 @@ class DataValues {
         scrumWorkflow +
         scrumArtifacts +
         scrumValues +
-        leanPrinciples+
+        leanPrinciples +
+        designThinkingPhases +
         extremeActivities +
         extremeValues +
         extremePrinciples +
