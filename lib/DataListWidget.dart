@@ -1,5 +1,4 @@
 import 'package:agile_cards/dataCardWidget.dart';
-import 'package:agile_cards/dataText.dart';
 import 'package:agile_cards/itemData.dart';
 import 'package:flutter/material.dart';
 

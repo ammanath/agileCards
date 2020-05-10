@@ -11,11 +11,7 @@ class DataValues {
           secondaryText: '',
           description:
               'Agile software development comprises various approaches to software development under which requirements and solutions evolve through the collaborative effort of self-organizing and cross-functional teams and their customers. It advocates adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages rapid and flexible response to change. The term agile was popularized, in this context, by the Manifesto for Agile Software Development. The values and principles espoused in this manifesto were derived from and underpin a broad range of software development frameworks, including Scrum and Kanban.',
-          refIcon: Icon(
-            Icons.favorite,
-            color: Colors.pink,
-            size: 24.0,
-          ),
+          refIcon: getRandomIcon(true),
           type: 'title'),
       ItemData(
           title: 'Agile Values',

@@ -4,6 +4,7 @@ import 'package:agile_cards/dataValues.dart';
 import 'package:agile_cards/itemData.dart';
 import 'package:agile_cards/reviewButton.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AgileCardsHomeWidget extends StatelessWidget {
   final dataKey = new GlobalKey();
@@ -17,7 +18,8 @@ class AgileCardsHomeWidget extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text('S/w Dev Cards'), actions: <Widget>[
+        appBar: AppBar(title: Text('S/w Dev Cards' , style: GoogleFonts.kalam(fontSize: 26, color: Colors.black),), 
+        actions: <Widget>[
           IconButton(
             icon: Icon(Icons.home),
             color: Colors.orange,

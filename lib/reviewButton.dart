@@ -11,7 +11,7 @@ class ReviewButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       icon: Icon(Icons.star),
-      color: Colors.blue[700],
+      color: Colors.pink[200],
       onPressed: () {
         show(context);
       },

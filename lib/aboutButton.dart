@@ -10,7 +10,7 @@ class AboutButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       icon: Icon(Icons.info),
-      color: Colors.blue[700],
+      color: Colors.lime,
       onPressed: () {
         showAboutDialog(context);
       },
