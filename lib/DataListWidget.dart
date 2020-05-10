@@ -26,8 +26,6 @@ class DataListWidget extends StatelessWidget {
         temp.add(element);
       } 
       if ((title != element.title) || element == last) {
-        //widgets.addAll(convertToWidgets(temp));
-        //TODO:Add Data Card Widgets
         dataCardWidget = DataCardWidget(itemList: temp);
         widgets.add(dataCardWidget);
         temp=[];
@@ -35,18 +33,6 @@ class DataListWidget extends StatelessWidget {
         temp.add(element);
       }
     });
-
-    // var dataValues = itemDataList.take(4);
-    // var dataPrinciples = itemDataList.sublist(4);
-
-    // var headerAgileValues = "Agile Values";
-    // var headerAgilePrinciples = "Agile Principles";
-
-    // var cardList = [
-    //   DataCardWidget(headerCard: headerAgileValues, dataCard: dataValues),
-    //   DataCardWidget(
-    //       headerCard: headerAgilePrinciples, dataCard: dataPrinciples),
-    // ];
 
     return Column(
       children: widgets,
