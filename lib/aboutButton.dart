@@ -30,13 +30,13 @@ class AboutButton extends StatelessWidget {
           return AlertDialog(
             title: Center(child: Text(
               "About this app",
-              style: GoogleFonts.amarante(fontSize: 26, color: Colors.black,)
+              style: GoogleFonts.amarante(fontSize: 26, color: Colors.black54,)
               )),
             content: Text.rich(
               TextSpan(
                 text: textAbout[0],
                 style: GoogleFonts.kalam(
-                  color: Colors.purple,
+                  color: Colors.black54,
                   letterSpacing: .5,
                   fontSize: 32,
                 ),
