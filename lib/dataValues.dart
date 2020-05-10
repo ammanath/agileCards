@@ -49,7 +49,7 @@ class DataValues {
           primaryText: '',
           secondaryText: '',
           description:
-              'Agile software development comprises various approaches to software development under which requirements and solutions evolve through the collaborative effort of self-organizing and cross-functional teams and their customers. It advocates adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages rapid and flexible response to change. The term agile was popularized, in this context, by the Manifesto for Agile Software Development.',
+              'Delving deeper than what they value in a project, the writers of the manifesto agreed on 12 principles, which further defines how to run an agile project. These offer more concrete examples of how agile software development should take place.',
           refIcon: getRandomIcon(),
           type: 'title'),
       ItemData(
