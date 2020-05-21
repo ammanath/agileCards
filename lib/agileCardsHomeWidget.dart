@@ -24,9 +24,19 @@ class AgileCardsHomeWidget extends StatelessWidget {
             icon: Icon(Icons.home),
             color: Colors.orange,
             onPressed: () =>
-                Scrollable.ensureVisible(dataKey.currentContext) //Top
-            ,
+                Scrollable.ensureVisible(dataKey.currentContext)//Top
           ),
+          IconButton(
+                icon: Icon(Icons.find_in_page),
+                color: Colors.white,
+                onPressed: () async {
+                  final ItemData selected = await showSearch<ItemData>(
+                      context: context, delegate: DataSearch());
+                  if (selected != null) {
+                    print("Item selected is: $selected");
+                  }
+                },
+              ),
           ReviewButton(),
           AboutButton(),
         ]),
@@ -43,5 +53,68 @@ class AgileCardsHomeWidget extends StatelessWidget {
         backgroundColor: Colors.lightBlue[800],
       ),
     );
+  }
+}
+
+
+class DataSearch extends SearchDelegate<ItemData> {
+  final List<ItemData> cities = DataValues()
+      .getItemValues()
+      .where((item) => item.type != 'title')
+      .toList();
+
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return [
+      IconButton(
+          icon: Icon(Icons.cancel),
+          onPressed: () {
+            query = "";
+          })
+    ];
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    return IconButton(
+        icon: AnimatedIcon(
+            icon: AnimatedIcons.menu_arrow, progress: transitionAnimation),
+        onPressed: () {
+          close(context, null);
+        });
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    print(context.widget.toString() + query);
+
+    return Text('Searched for $query');
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    final List<ItemData> suggestionList = query.isEmpty
+        ? cities.sublist(5, 8)
+        : cities
+            .where((element) => element.primaryText
+                ?.toLowerCase()
+                ?.contains(query.toLowerCase()))
+            ?.toList(); 
+    var dlw ;
+    if(suggestionList!=null && suggestionList.isNotEmpty){
+    dlw = DataListWidget(
+      itemDataList: suggestionList,
+    );
+    }else{  
+      dlw = Text('-');
+    }
+    return SingleChildScrollView(child: dlw);
+
+  }
+
+  @override
+  ThemeData appBarTheme(BuildContext context) {
+    final theme = Theme.of(context);
+    return theme;
   }
 }
