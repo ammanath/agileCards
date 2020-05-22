@@ -714,6 +714,112 @@ class DataValues {
           type: 'card'),
     ];
 
+    var a12factors = [
+      ItemData(
+          title: '12 Factor App',
+          primaryText: '',
+          secondaryText: '',
+          description:
+              'The Twelve-Factor App methodology is a methodology for building software-as-a-service applications. These best practices are designed to enable applications to be built with portability and resilience when deployed to the web.',
+          refIcon: getRandomIcon(),
+          type: 'title'),
+      ItemData(
+          title: '12 Factor App',
+          primaryText: 'Codebase',
+          secondaryText:
+              'There should be exactly one codebase for a deployed service with the codebase being used for many deployments.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: '12 Factor App',
+          primaryText: 'Dependencies',
+          secondaryText:
+              '	All dependencies should be declared, with no implicit reliance on system tools or libraries.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: '12 Factor App',
+          primaryText: 'Config',
+          secondaryText:
+              'Configuration that varies between deployments should be stored in the environment.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: '12 Factor App',
+          primaryText: 'Backing services',
+          secondaryText:
+              '	All backing services are treated as attached resources and attached and detached by the execution environment.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: '12 Factor App',
+          primaryText: 'Build, release, run',
+          secondaryText:
+              '	The delivery pipeline should strictly consist of build, release, run.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: '12 Factor App',
+          primaryText: 'Processes',
+          secondaryText:
+              'Applications should be deployed as one or more stateless processes with persisted data stored on a backing service.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: '12 Factor App',
+          primaryText: 'Port binding',
+          secondaryText:
+              'Self-contained services should make themselves available to other services by specified ports.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: '12 Factor App',
+          primaryText: 'Concurrency',
+          secondaryText:
+              'Concurrency is advocated by scaling individual processes.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: '12 Factor App',
+          primaryText: 'Disposability',
+          secondaryText:
+              'Fast startup and shutdown are advocated for a more robust and resilient system.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: '12 Factor App',
+          primaryText: 'Dev/Prod parity',
+          secondaryText: '	All environments should be as similar as possible.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: '12 Factor App',
+          primaryText: 'Logs',
+          secondaryText:
+              '	Applications should produce logs as event streams and leave the execution environment to aggregate.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+      ItemData(
+          title: '12 Factor App',
+          primaryText: 'Admin Processes',
+          secondaryText:
+              'Any needed admin tasks should be kept in source control and packaged with the application.',
+          description: '',
+          refIcon: getRandomIcon(),
+          type: 'card'),
+    ];
+
     var dummy = [
       ItemData(
           title: 'TTT',
@@ -743,7 +849,8 @@ class DataValues {
         extremePrinciples +
         extremePractices +
         extremeRules +
-        solidPrinciples;
+        solidPrinciples +
+        a12factors;
   }
 
   Icon getRandomIcon([bool randomColor]) {
