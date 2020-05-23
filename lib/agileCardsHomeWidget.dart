@@ -106,7 +106,7 @@ class DataSearch extends SearchDelegate<ItemData> {
       itemDataList: suggestionList,
     );
     }else{  
-      dlw = Text('-');
+      dlw = Text('No results found',style: GoogleFonts.kalam(fontSize: 22, color: Colors.blue));
     }
     return SingleChildScrollView(child: dlw);
 
