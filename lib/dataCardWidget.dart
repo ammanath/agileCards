@@ -18,7 +18,7 @@ class DataCardWidget extends StatelessWidget {
     itemList.forEach((element) {
       if (element.type == 'title') {
         children.add(Padding(
-          padding: const EdgeInsets.fromLTRB(8.0, 18.0, 0.0, 8.0),
+          padding: const EdgeInsets.fromLTRB(8.0, 8.0, 0.0, 8.0),
           child: HeaderTextWidget(itemData: element),
         ));
         defaultIcon = element.refIcon;

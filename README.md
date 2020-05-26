@@ -26,3 +26,10 @@ Add cards to show the Extreme Programming values and other frameworks.
 	* Harnessing change for a competitive advantage
 
 ### Extreme Programming Principles
+
+## Beta testing link
+https://play.google.com/apps/testing/com.fintechthoughtleaders.agile_cards
+
+## To build app bundle
+\agile_cards> flutter build appbundle
+

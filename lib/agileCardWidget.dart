@@ -12,11 +12,11 @@ class AgileCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var secondaryStyle = TextStyle(
-      fontSize: 18,
+      fontSize: 16,
       color: Colors.black45,
     );
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(2.0),
       child: Card(
         child: Container(
           child: ListTile(
@@ -24,7 +24,7 @@ class AgileCardWidget extends StatelessWidget {
               title: Text.rich(
                 TextSpan(
                   text: itemData.primaryText,
-                  style: TextStyle(fontSize: 25, color: Colors.black),
+                  style: TextStyle(fontSize: 18, color: Colors.black),
                   children: [TextSpan(
                     text:' ' + itemData.secondaryText ,
                     style: secondaryStyle)],
@@ -43,6 +43,4 @@ class AgileCardWidget extends StatelessWidget {
       ),
     );
   }
-
-
 }

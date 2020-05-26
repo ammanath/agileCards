@@ -19,7 +19,7 @@ class AboutButton extends StatelessWidget {
 
   void showAboutDialog(BuildContext context) {
     var textAbout =
-        "A quick primer about Software Development Methodologies and some key principles for cutting top quality code. \n  If you have any suggestions about the app, then I will be much obliged if you drop me a note : ";
+        "A brief primer about Software Development Methodologies and some key principles for cutting top quality code. \n  If you have any suggestions about the app, then I will be much obliged if you drop me a note : ";
     String email = "swapp@ammanath.com";
     String thanks =  "\nThanks for trying my app! ";
     String signature = "\n\n- Brijesh";
@@ -47,7 +47,7 @@ class AboutButton extends StatelessWidget {
                   ),
                   TextSpan(
                     text: email,
-                    style: GoogleFonts.marvel(fontSize: 20, color: Colors.pink, ),
+                    style: GoogleFonts.marvel(fontSize: 20, color: Colors.blue, ),
                   ),
                   TextSpan(
                     text: thanks,

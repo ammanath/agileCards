@@ -50,7 +50,7 @@ class DisplayWidget extends StatelessWidget {
       textStyle: GoogleFonts.vt323(
         color: Colors.blue,
         letterSpacing: .5,
-        fontSize: dataText.type == 'title' ? 22 : 32,
+        fontSize: dataText.type == 'title' ? 16 : 18,
       ),
       displayFullTextOnTap: true,
       stopPauseOnTap: true,
@@ -63,11 +63,11 @@ class DisplayWidget extends StatelessWidget {
       child: Text.rich(
         TextSpan(
           text: text[0],
-          style: GoogleFonts.kalam(fontSize: 35, color: Colors.pink),
+          style: GoogleFonts.kalam(fontSize: 22, color: Colors.blue),
           children: [
             TextSpan(
               text: text.substring(1),
-              style: GoogleFonts.kalam(fontSize: 20, color: Colors.black54),
+              style: GoogleFonts.kalam(fontSize: 16, color: Colors.black54),
             )
           ],
         ),

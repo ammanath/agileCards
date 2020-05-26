@@ -18,7 +18,7 @@ class AgileCardsHomeWidget extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text('S/w Dev Cards' , style: GoogleFonts.kalam(fontSize: 26, color: Colors.black),), 
+        appBar: AppBar(title: Text('S/w Cards' , style: GoogleFonts.kalam(fontSize: 22, color: Colors.black),), 
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.home),

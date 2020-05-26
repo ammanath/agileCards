@@ -19,7 +19,7 @@ class HeaderTextWidget extends StatelessWidget {
         textAlign: TextAlign.center,
         style: TextStyle(
           color: Colors.blue[100],
-          fontSize: 24,
+          fontSize: 20,
           letterSpacing: 8.0,
           fontWeight: FontWeight.bold,
         ),
