@@ -33,3 +33,5 @@ https://play.google.com/apps/testing/com.fintechthoughtleaders.agile_cards
 ## To build app bundle
 \agile_cards> flutter build appbundle
 
+https://play.google.com/apps/publish/?authuser=1&account=8573201187318167230#AppListPlace
+

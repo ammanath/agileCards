@@ -18,7 +18,7 @@ class AgileCardsHomeWidget extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text('S/w Cards' , style: GoogleFonts.kalam(fontSize: 22, color: Colors.black),), 
+        appBar: AppBar(title: Text('S/w Cards' , style: GoogleFonts.kadwa(fontSize: 24, color: Colors.blue[700]),), 
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.home),
@@ -62,6 +62,12 @@ class DataSearch extends SearchDelegate<ItemData> {
       .getItemValues()
       .where((item) => item.type != 'title')
       .toList();
+//TODO: Can possibly append the title to all the card text below it
+  // final List<ItemData> li = DataValues().getItemValues().map((e) => {if(e.type=='title'){
+
+  // }else{
+  //   e.description+=e.t
+  // }}).toList();
 
   @override
   List<Widget> buildActions(BuildContext context) {
@@ -96,7 +102,7 @@ class DataSearch extends SearchDelegate<ItemData> {
     final List<ItemData> suggestionList = query.isEmpty
         ? cities.sublist(5, 8)
         : cities
-            .where((element) => element.primaryText
+            .where((element) =>  element.primaryText
                 ?.toLowerCase()
                 ?.contains(query.toLowerCase()))
             ?.toList(); 
