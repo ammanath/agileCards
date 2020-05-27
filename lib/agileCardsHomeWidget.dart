@@ -18,15 +18,19 @@ class AgileCardsHomeWidget extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text('S/w Cards' , style: GoogleFonts.kadwa(fontSize: 24, color: Colors.blue[700]),), 
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            color: Colors.orange,
-            onPressed: () =>
-                Scrollable.ensureVisible(dataKey.currentContext)//Top
-          ),
-          IconButton(
+        appBar: AppBar(
+            title: Text(
+              'S/w Cards',
+              style: GoogleFonts.kadwa(fontSize: 24, color: Colors.blue[700]),
+            ),
+            actions: <Widget>[
+              IconButton(
+                  icon: Icon(Icons.home),
+                  color: Colors.orange,
+                  onPressed: () =>
+                      Scrollable.ensureVisible(dataKey.currentContext) //Top
+                  ),
+              IconButton(
                 icon: Icon(Icons.find_in_page),
                 color: Colors.white,
                 onPressed: () async {
@@ -37,9 +41,9 @@ class AgileCardsHomeWidget extends StatelessWidget {
                   }
                 },
               ),
-          ReviewButton(),
-          AboutButton(),
-        ]),
+              ReviewButton(),
+              AboutButton(),
+            ]),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
@@ -56,18 +60,17 @@ class AgileCardsHomeWidget extends StatelessWidget {
   }
 }
 
-
 class DataSearch extends SearchDelegate<ItemData> {
   final List<ItemData> cities = DataValues()
       .getItemValues()
       .where((item) => item.type != 'title')
+      .map((i) => getUpdatedItem(i))
       .toList();
-//TODO: Can possibly append the title to all the card text below it
-  // final List<ItemData> li = DataValues().getItemValues().map((e) => {if(e.type=='title'){
 
-  // }else{
-  //   e.description+=e.t
-  // }}).toList();
+  static ItemData getUpdatedItem(ItemData i) {
+    i.primaryText = i.title + ' - ' + i.primaryText;
+    return i;
+  }
 
   @override
   List<Widget> buildActions(BuildContext context) {
@@ -102,20 +105,20 @@ class DataSearch extends SearchDelegate<ItemData> {
     final List<ItemData> suggestionList = query.isEmpty
         ? cities.sublist(5, 8)
         : cities
-            .where((element) =>  element.primaryText
+            .where((element) => element.primaryText
                 ?.toLowerCase()
                 ?.contains(query.toLowerCase()))
-            ?.toList(); 
-    var dlw ;
-    if(suggestionList!=null && suggestionList.isNotEmpty){
-    dlw = DataListWidget(
-      itemDataList: suggestionList,
-    );
-    }else{  
-      dlw = Text('No results found',style: GoogleFonts.kalam(fontSize: 22, color: Colors.blue));
+            ?.toList();
+    var dlw;
+    if (suggestionList != null && suggestionList.isNotEmpty) {
+      dlw = DataListWidget(
+        itemDataList: suggestionList,
+      );
+    } else {
+      dlw = Text('No results found',
+          style: GoogleFonts.kalam(fontSize: 22, color: Colors.blue));
     }
     return SingleChildScrollView(child: dlw);
-
   }
 
   @override
