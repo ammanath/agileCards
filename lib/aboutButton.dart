@@ -47,7 +47,7 @@ class AboutButton extends StatelessWidget {
                   ),
                   TextSpan(
                     text: email,
-                    style: GoogleFonts.marvel(fontSize: 20, color: Colors.blue, ),
+                    style: GoogleFonts.marvel(fontSize: 16, color: Colors.blue, ),
                   ),
                   TextSpan(
                     text: thanks,
@@ -64,7 +64,7 @@ class AboutButton extends StatelessWidget {
             backgroundColor: Colors.blue[100],
             actions: <Widget>[
               RaisedButton(
-                child: Text('Ok', style: GoogleFonts.amarante(fontSize: 26, color: Colors.black,)),
+                child: Text('Ok!', style: GoogleFonts.amarante(fontSize: 26, color: Colors.black45,)),
                 textColor: Colors.blue,
                 onPressed: () {
                   Navigator.of(context).pop();

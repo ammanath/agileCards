@@ -21,7 +21,7 @@ class AgileCardsHomeWidget extends StatelessWidget {
         appBar: AppBar(
             title: Text(
               'S/w Cards',
-              style: GoogleFonts.kadwa(fontSize: 24, color: Colors.blue[700]),
+              style: GoogleFonts.badScript(fontSize: 24, color: Colors.white60, fontWeight: FontWeight.bold),
             ),
             actions: <Widget>[
               IconButton(
