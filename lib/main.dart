@@ -1,9 +1,7 @@
 import 'package:agile_cards/agileCardsHomeWidget.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(AgileCardsApp());
-}
+void main() =>  runApp(AgileCardsApp());
 
 class AgileCardsApp extends StatelessWidget {
   @override

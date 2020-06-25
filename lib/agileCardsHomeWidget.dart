@@ -116,7 +116,7 @@ class DataSearch extends SearchDelegate<ItemData> {
       );
     } else {
       dlw = Text('No results found',
-          style: GoogleFonts.kalam(fontSize: 22, color: Colors.blue));
+          style: GoogleFonts.satisfy(fontSize: 22, color: Colors.blue));
     }
     return SingleChildScrollView(child: dlw);
   }

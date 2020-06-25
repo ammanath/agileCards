@@ -63,11 +63,11 @@ class DisplayWidget extends StatelessWidget {
       child: Text.rich(
         TextSpan(
           text: text[0],
-          style: GoogleFonts.kalam(fontSize: 22, color: Colors.blue),
+          style: GoogleFonts.satisfy(fontSize: 22, color: Colors.blue),
           children: [
             TextSpan(
               text: text.substring(1),
-              style: GoogleFonts.kalam(fontSize: 16, color: Colors.black54),
+              style: GoogleFonts.satisfy(fontSize: 16, color: Colors.black54),
             )
           ],
         ),
