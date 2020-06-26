@@ -31,7 +31,7 @@ Add cards to show the Extreme Programming values and other frameworks.
 https://play.google.com/apps/testing/com.fintechthoughtleaders.agile_cards
 
 ## To build app bundle
-Increase version in pubspec.yaml : version: 1.0.0+12
+Increase version in pubspec.yaml : version: 1.0.0+13
 \agile_cards> flutter build appbundle
 \agile_cards> flutter build appbundle --no-tree-shake-icons
 
