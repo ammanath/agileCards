@@ -65,7 +65,7 @@ class DataValues {
           primaryText: 'Breaking big work down',
           secondaryText: 'into smaller tasks that can be completed quickly',
           description: '',
-          refIcon: getRandomIcon(),
+          refIcon: getRandomIcon(true),
           type: 'card'),
       ItemData(
           title: 'Agile Principles',

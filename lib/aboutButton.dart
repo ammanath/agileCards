@@ -21,18 +21,20 @@ class AboutButton extends StatelessWidget {
     var textAbout =
         "A brief primer about Software Development Methodologies and some key principles for developing top quality code. \n  If you have any suggestions about the app, then I will be much obliged if you drop me a note : ";
     String email = "swapp@ammanath.com";
-    String version = '\nv1.12';
-    String thanks =  "\nThanks for trying my app! ";
+    String version = '\nv1.13';
+    String thanks = "\nThanks for trying my app! ";
     String signature = "\n\n- Brijesh";
     showDialog(
         context: context,
         barrierDismissible: true,
         builder: (context) {
           return AlertDialog(
-            title: Center(child: Text(
-              "About this app",
-              style: GoogleFonts.amarante(fontSize: 26, color: Colors.black54,)
-              )),
+            title: Center(
+                child: Text("About this app",
+                    style: GoogleFonts.amarante(
+                      fontSize: 26,
+                      color: Colors.black54,
+                    ))),
             content: Text.rich(
               TextSpan(
                 text: textAbout[0],
@@ -44,23 +46,35 @@ class AboutButton extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: textAbout.substring(1),
-                    style: GoogleFonts.satisfy(fontSize: 16, color: Colors.black54),
+                    style: GoogleFonts.satisfy(
+                        fontSize: 16, color: Colors.black54),
                   ),
                   TextSpan(
                     text: email,
-                    style: GoogleFonts.satisfy(fontSize: 16, color: Colors.blue, ),
+                    style: GoogleFonts.satisfy(
+                      fontSize: 16,
+                      color: Colors.blue,
+                    ),
                   ),
                   TextSpan(
                     text: version,
-                    style: GoogleFonts.satisfy(fontSize: 10, color: Colors.black54,fontStyle: FontStyle.italic, ),
+                    style: GoogleFonts.satisfy(
+                      fontSize: 10,
+                      color: Colors.black54,
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
                   TextSpan(
                     text: thanks,
-                    style: GoogleFonts.satisfy(fontSize: 16, color: Colors.black54),
+                    style: GoogleFonts.satisfy(
+                        fontSize: 16, color: Colors.black54),
                   ),
                   TextSpan(
                     text: signature,
-                    style: GoogleFonts.dancingScript(fontSize: 20, color: Colors.blue, ),
+                    style: GoogleFonts.dancingScript(
+                      fontSize: 20,
+                      color: Colors.blue,
+                    ),
                   )
                 ],
               ),
@@ -69,7 +83,11 @@ class AboutButton extends StatelessWidget {
             backgroundColor: Colors.blue[100],
             actions: <Widget>[
               RaisedButton(
-                child: Text('Ok!', style: GoogleFonts.amarante(fontSize: 26, color: Colors.black45,)),
+                child: Text('Ok!',
+                    style: GoogleFonts.amarante(
+                      fontSize: 26,
+                      color: Colors.black45,
+                    )),
                 textColor: Colors.blue,
                 onPressed: () {
                   Navigator.of(context).pop();

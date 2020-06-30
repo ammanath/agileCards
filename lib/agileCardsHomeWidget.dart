@@ -21,7 +21,10 @@ class AgileCardsHomeWidget extends StatelessWidget {
         appBar: AppBar(
             title: Text(
               'S/w Cards',
-              style: GoogleFonts.badScript(fontSize: 24, color: Colors.white60, fontWeight: FontWeight.bold),
+              style: GoogleFonts.badScript(
+                  fontSize: 24,
+                  color: Colors.white60,
+                  fontWeight: FontWeight.bold),
             ),
             actions: <Widget>[
               IconButton(
@@ -95,8 +98,6 @@ class DataSearch extends SearchDelegate<ItemData> {
 
   @override
   Widget buildResults(BuildContext context) {
-    print(context.widget.toString() + query);
-
     return Text('Searched for $query');
   }
 
