@@ -19,13 +19,10 @@ class AgileCardsHomeWidget extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-            title: Text(
-              'S/w Cards',
-              style: GoogleFonts.badScript(
-                  fontSize: 24,
-                  color: Colors.white60,
-                  fontWeight: FontWeight.bold),
-            ),
+            title: Text('S/w Cards',
+                style: TextStyle(
+                  fontFamily: 'BadScript',
+                )),
             actions: <Widget>[
               IconButton(
                   icon: Icon(Icons.home),

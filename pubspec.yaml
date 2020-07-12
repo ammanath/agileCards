@@ -32,7 +32,25 @@ flutter_icons:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: Amarante     
+      fonts:
+        - asset: fonts/Amarante_script.ttf
+    - family: BadScript     
+      fonts:
+        - asset: fonts/BadScript.ttf
+    - family: DancingScript     
+      fonts:
+        - asset: fonts/DancingScript.ttf
+    - family: Satisfy     
+      fonts:
+        - asset: fonts/Satisfy.ttf              
+    - family: Fondamento     
+      fonts:
+        - asset: fonts/fondamentoReg.ttf
+        - asset: fonts/fondamentoIta.ttf
+          style: italic
 
 assets:
-  - google_fonts/
+# - assets/images/
 
