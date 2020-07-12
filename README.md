@@ -37,7 +37,7 @@ Increase version in pubspec.yaml : version: 1.0.0+13
 
 
 ## .aab file created in 
-\build\app\outputs\bundle\release
+C:\working\FlutterProjs\agile_cards\build\app\outputs\bundle\release
 
 
 ## Google play store

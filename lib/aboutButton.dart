@@ -21,7 +21,7 @@ class AboutButton extends StatelessWidget {
     var textAbout =
         "A brief primer about Software Development Methodologies and some key principles for developing top quality code. \n  If you have any suggestions about the app, then I will be much obliged if you drop me a note : ";
     String email = "swapp@ammanath.com";
-    String version = '\nv1.13';
+    String version = '\nv1.15';
     String thanks = "\nThanks for trying my app! ";
     String signature = "\n\n- Brijesh";
     showDialog(
