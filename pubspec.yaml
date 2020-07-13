@@ -4,7 +4,7 @@ description: A set of cards with software development principles
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 
-version: 1.0.0+15
+version: 1.0.0+16
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -44,7 +44,10 @@ flutter:
         - asset: fonts/DancingScript.ttf
     - family: Satisfy     
       fonts:
-        - asset: fonts/Satisfy.ttf              
+        - asset: fonts/Satisfy.ttf      
+    - family: Typewriter     
+      fonts:
+        - asset: fonts/VT323.ttf           
     - family: Fondamento     
       fonts:
         - asset: fonts/fondamentoReg.ttf
