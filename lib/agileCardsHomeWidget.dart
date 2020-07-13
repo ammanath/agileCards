@@ -21,7 +21,7 @@ class AgileCardsHomeWidget extends StatelessWidget {
         appBar: AppBar(
             title: Text('S/w Cards',
                 style: TextStyle(
-                  fontFamily: 'BadScript',
+                  fontFamily: 'DancingScript',
                 )),
             actions: <Widget>[
               IconButton(
